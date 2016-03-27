@@ -57,16 +57,12 @@ We will also use Jupyter (IPython) notebooks, but this does not remove the need 
 
 ###Q1. Terminal Editor
 
-What terminal editor will you use? How did you make your decision?
-
->> REPLACE THIS TEXT WITH YOUR RESPONSE
-
+VIM. somewhat familiar with it.
 --
 
 ###Q2. Graphical Editor
 
 What graphical editor will you use? How did you make your decision? What are some interesting features of your editor? What are some useful keyboard shortcuts for your editor? How do you customize your editor?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
-
+Spyder. Comes with the Python installation. Quick to get started. I like the console layout. Customize by going to python>preferences.
  
