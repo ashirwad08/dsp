@@ -64,7 +64,8 @@ example, the cumulative sum of [1, 2, 3] is [1, 3, 6].
 ```python
 def cumsum(l):
   [sum(l[:i+1]) for i in range(len(l))] 
----  
+```  
+  
 
 ##### Solution Using Map and Filter  
 ```python
@@ -88,6 +89,7 @@ def cumsum(l):
 {key:expr for key,val in dict.iteritems()}
 ```  
  
+---  
 
 
 ###Complete the following problems by editing the files below:
