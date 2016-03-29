@@ -12,7 +12,8 @@ For quick and easy interactive practice with Python, many people enjoy [Codecade
 
 How are Python lists and tuples similar and different? Which will work as keys in dictionaries? Why?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+Lists are mutable, whereas tuples are immutable. Conseuqnetly lists are typically used for homogenous elements and which are accessed by iterating over the list, whereas tuples are used for sequencing heterogenous elements that are accessed via unpacking or indexing. Tuples will work as keys in dictionaries because distionaries require immutable objects to compute the hash values. 
+
 
 ---
 
@@ -20,7 +21,10 @@ How are Python lists and tuples similar and different? Which will work as keys i
 
 How are Python lists and sets similar and different? Give examples of using both. How does performance compare between lists and sets for finding an element. Why?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+A set seems to be a list with a unique unordered collection of elements. If we were to find an element on a list, we have to iterate potentially over every element og the list which results in a O(n) performance order, however since sets use a hash function to map each unique element to a bucket, testing for presence in a set is significantly faster, no matter the size of the set, that is it is O(constant).   
+
+* List search: _l = [1, 2, 3, 4, 5, 5, 6, 6, 7]_; _5 in l_   
+* Set: s = set(l); 5 in s
 
 ---
 
@@ -28,7 +32,19 @@ How are Python lists and sets similar and different? Give examples of using both
 
 Describe Python's `lambda`. What is it, and what is it used for? Give at least one example, including an example of using a `lambda` in the `key` argument to `sorted`.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+lambda is a way to define and use a single expression anonymous function when required:  
+```python
+print sorted(l, key=lambda elm: elm/random.randint(1,100)) #sorts the above list based on each element being divided by a random number.   
+```  
+
+another example uses f to raise to any exponent: 
+```python  
+def ex(n): 
+  return lambda(x)=x**n
+
+f = ex(5)
+f(2) #returns 32.
+```  
 
 ---
 
@@ -36,9 +52,43 @@ Describe Python's `lambda`. What is it, and what is it used for? Give at least o
 
 Explain list comprehensions. Give examples and show equivalents with `map` and `filter`. How do their capabilities compare? Also demonstrate set comprehensions and dictionary comprehensions.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+List comprehension is a compact way to write an expression that expands into a whole list.Syntax: _[expr for var in list]_  
 
----
+#### Sample Problem  
+Write a function that takes a list of numbers and returns the cumulative sum; that
+is, a new list where the ith element is the sum of the first i + 1 elements from the original list. For
+example, the cumulative sum of [1, 2, 3] is [1, 3, 6].  
+
+##### Solution Using List Comprehension  
+
+```python
+def cumsum(l):
+  [sum(l[:i+1]) for i in range(len(l))] 
+---  
+
+##### Solution Using Map and Filter  
+```python
+def cumsum(l):
+  csuml = []
+  for i in range(len(l)):
+    csuml.append(sum(l[:i+1])) #map using sum() and filter until the first i+1 elements
+  return csuml
+```
+##### Set Comprehension Example  
+```python
+{sum(l[:i+1]) for i in range(len(l))} #same output as above except unordered (and unique, but not applicable here)
+```  
+
+##### Dict Comprehension Example
+```python
+#generate a dict of squares using dict comp.
+{k:v**2 for k,v in l}
+
+#iterate over existing dict
+{key:expr for key,val in dict.iteritems()}
+```  
+ 
+
 
 ###Complete the following problems by editing the files below:
 
