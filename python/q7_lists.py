@@ -15,7 +15,8 @@ def match_ends(words):
     >>> match_ends(['aaa', 'be', 'abc', 'hello'])
     1
     """
-    raise NotImplementedError
+    return len([s for s in words if len(s)>=2 and s[0]==s[len(s)-1]])
+
 
 
 def front_x(words):
@@ -32,7 +33,26 @@ def front_x(words):
     >>> front_x(['mix', 'xyz', 'apple', 'xanadu', 'aardvark'])
     ['xanadu', 'xyz', 'aardvark', 'apple', 'mix']
     """
-    raise NotImplementedError
+    words.sort()
+    final = []
+    length = len(words)
+    i=0
+    
+    #iterate only once instead of twice with list comprehensions
+    while i < length:
+        if words[i][0]=='x':
+            final.append(words.pop(i))
+            length = len(words)
+            i -= 1
+        i += 1
+      
+    final.extend(words)
+        
+    
+    #final.extend([w for w in words if w[0]=='x'])        
+    #final.extend([w for w in words if w[0]!='x'])
+    
+    return final
 
 
 def sort_last(tuples):
@@ -49,7 +69,10 @@ def sort_last(tuples):
     >>> sort_last([(1, 7), (1, 3), (3, 4, 5), (2, 2)])
     [(2, 2), (1, 3), (3, 4, 5), (1, 7)]
     """
-    raise NotImplementedError
+    def second(t):
+        return t[len(t)-1]
+    
+    return sorted(tuples, key=second)
 
 
 def remove_adjacent(nums):
@@ -68,8 +91,22 @@ def remove_adjacent(nums):
     >>> remove_adjacent([])
     []
     """
-    raise NotImplementedError
-
+    
+    i = len(nums)-1
+    #preserved = False
+    
+    while i > 0:
+        if nums[i]-nums[i-1] == 0:
+            nums.pop(i)
+            #preserved = True
+        #else:
+            #preserved = False 
+            
+        i -= 1
+    
+    return nums
+    
+    
 
 def linear_merge(list1, list2):
     """
@@ -84,5 +121,47 @@ def linear_merge(list1, list2):
     ['aa', 'bb', 'cc', 'xx', 'zz']
     >>> linear_merge(['aa', 'aa'], ['aa', 'bb', 'bb'])
     ['aa', 'aa', 'aa', 'bb', 'bb']
-    """
-    raise NotImplementedError
+    """ 
+    
+    #stack = ()
+    merged = []
+    
+    
+    #boundary conditions since lists are laready sorted
+    if list1[len(list1)-1] <= list2[0]:
+        list1.extend(list2)
+        return list1
+    elif list1[0] >= list2[len(list2)-1]:
+        list2.extend(list1)
+        return list2
+    else:
+        i = 0
+        j = 0
+       
+        while len(list1)>0 and len(list2)>0:
+            if list1[i] < list2[j]:
+                merged.append(list1[i])
+                list1.remove(list1[i])
+            else:
+                merged.append(list2[j])
+                list2.remove(list2[j])
+        
+        #append remaining from any list
+        merged.extend(list1)
+        merged.extend(list2)
+                
+        return merged
+            
+        
+                
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
