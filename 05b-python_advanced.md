@@ -19,22 +19,79 @@ This data is available in this file:  [faculty.csv](python/faculty.csv)
 
 ####Q1. Find how many different degrees there are, and their frequencies: Ex:  PhD, ScD, MD, MPH, BSEd, MS, JD, etc.
 
->> REPLACE THIS WITH YOUR RESPONSE
+There are 7 different degrees. These, along with their frequencies are:  
+```
+{'degree': ['MD', 'MA', 'ScD', 'MPH', 'PhD', 'MS', 'JD'],
+ 'freq': [1, 1, 6, 2, 31, 2, 1]}
+```  
+
 
 
 ####Q2. Find how many different titles there are, and their frequencies:  Ex:  Assistant Professor, Professor
 
->> REPLACE THIS WITH YOUR RESPONSE
+There are 3 different titles. These, along with their frequencies are:  
+```
+{'freq': [12, 13, 12],
+ 'title': ['Assistant Professor', 'Professor', 'Associate Professor']}
+```   
+
 
 
 ####Q3. Search for email addresses and put them in a list.  Print the list of email addresses.
 
->> REPLACE THIS WITH YOUR RESPONSE
+List of all email addresses:  
+```
+['bellamys@mail.med.upenn.edu',
+ 'warren@upenn.edu',
+ 'bryanma@upenn.edu',
+ 'jinboche@upenn.edu',
+ 'sellenbe@upenn.edu',
+ 'jellenbe@mail.med.upenn.edu',
+ 'ruifeng@upenn.edu',
+ 'bcfrench@mail.med.upenn.edu',
+ 'pgimotty@upenn.edu',
+ 'wguo@mail.med.upenn.edu',
+ 'hsu9@mail.med.upenn.edu',
+ 'rhubb@mail.med.upenn.edu',
+ 'whwang@mail.med.upenn.edu',
+ 'mjoffe@mail.med.upenn.edu',
+ 'jrlandis@mail.med.upenn.edu',
+ 'liy3@email.chop.edu',
+ 'mingyao@mail.med.upenn.edu',
+ 'hongzhe@upenn.edu',
+ 'rlocalio@upenn.edu',
+ 'nanditam@mail.med.upenn.edu',
+ 'knashawn@mail.med.upenn.edu',
+ 'propert@mail.med.upenn.edu',
+ 'mputt@mail.med.upenn.edu',
+ 'sratclif@upenn.edu',
+ 'michross@upenn.edu',
+ 'jaroy@mail.med.upenn.edu',
+ 'msammel@cceb.med.upenn.edu',
+ 'shawp@upenn.edu',
+ 'rshi@mail.med.upenn.edu',
+ 'hshou@mail.med.upenn.edu',
+ 'jshults@mail.med.upenn.edu',
+ 'alisaste@mail.med.upenn.edu',
+ 'atroxel@mail.med.upenn.edu',
+ 'rxiao@mail.med.upenn.edu',
+ 'sxie@mail.med.upenn.edu',
+ 'dxie@upenn.edu',
+ 'weiyang@mail.med.upenn.edu']
+```  
+
+
 
 
 ####Q4. Find how many different email domains there are (Ex:  mail.med.upenn.edu, upenn.edu, email.chop.edu, etc.).  Print the list of unique email domains.
 
->> REPLACE THIS WITH YOUR RESPONSE
+There are 4 unique email domains. These are:  
+```
+['@upenn.edu', '@email.chop.edu', '@cceb.med.upenn.edu', '@mail.med.upenn.edu']
+```  
+
+
+
 
 Place your code in this file: [advanced_python_regex.py](python/advanced_python_regex.py)
 
@@ -74,7 +131,14 @@ faculty_dict = { 'Ellenberg': [\
 ```
 Print the first 3 key and value pairs of the dictionary:
 
->> REPLACE THIS WITH YOUR RESPONSE
+Here's what we get:  
+```
+('Bellamy', [['Sc.D.', 'Associate Professor', 'bellamys@mail.med.upenn.edu']])
+('Bilker', [['Ph.D.', 'Professor', 'warren@upenn.edu']])
+('Bryan', [['Ph.D.', 'Assistant Professor', 'bryanma@upenn.edu']])
+```  
+
+
 
 ####Q7.  The previous dictionary does not have the best design for keys.  Create a new dictionary with keys as:
 
@@ -89,11 +153,26 @@ professor_dict = {('Susan', 'Ellenberg'): ['Ph.D.', 'Professor', 'sellenbe@upenn
 
 Print the first 3 key and value pairs of the dictionary:
 
->> REPLACE THIS WITH YOUR RESPONSE
+Revised the above with tuples as keys (sorted by first name):  
+```
+(('A', 'Localio'), [['JD. MA. MPH. MS. Ph.D.', 'Associate Professor', 'rlocalio@upenn.edu']])
+(('Alisa', 'Stephens'), [['Ph.D.', 'Assistant Professor', 'alisaste@mail.med.upenn.edu']])
+(('Andrea', 'Troxel'), [['Sc.D.', 'Professor', 'atroxel@mail.med.upenn.edu']])
+```  
+
+
+
 
 ####Q8.  It looks like the current dictionary is printing by first name.  Sort by last name and print the first 3 key and value pairs.  
 
->> REPLACE THIS WITH YOUR RESPONSE
+Revised, sorted by last name:  
+```
+(('Scarlett', 'Bellamy'), [['Sc.D.', 'Associate Professor', 'bellamys@mail.med.upenn.edu']])
+(('Warren', 'Bilker'), [['Ph.D.', 'Professor', 'warren@upenn.edu']])
+(('Matthew', 'Bryan'), [['Ph.D.', 'Assistant Professor', 'bryanma@upenn.edu']])
+```  
+
+
 
 Place your code in this file: [advanced_python_dict.py](python/advanced_python_dict.py)
 
@@ -101,5 +180,9 @@ Place your code in this file: [advanced_python_dict.py](python/advanced_python_d
 
 If you're all done and looking for an extra challenge, then try the below problem:  
 
-### [Markov](python/markov.py) (Optional)
+### [Markov](python/markov.py) (Optional) 
+
+_Note: I chose not to do this here because I'm working on a similar project building an app based on a Markov model as part of my R based [online specialization](https://www.coursera.org/learn/data-science-project/)_.  
+
+ 
 
