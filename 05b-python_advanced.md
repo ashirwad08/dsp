@@ -87,10 +87,9 @@ List of all email addresses:
 
 There are 4 unique email domains. These are:  
 ```
-['@upenn.edu', '@email.chop.edu', '@cceb.med.upenn.edu', '@mail.med.upenn.edu']
+['email.chop.edu', 'upenn.edu', 'cceb.med.upenn.edu', 'mail.med.upenn.edu']
 ```  
-
-
+  
 
 
 Place your code in this file: [advanced_python_regex.py](python/advanced_python_regex.py)

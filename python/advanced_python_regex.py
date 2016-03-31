@@ -76,7 +76,7 @@ def emailDomains(emailList):
   domains = []
   
   for email in emailList:
-    domains.append(re.search('@\S+', email).group())
+    domains.append(re.search('(?<=@)\S+', email).group())
   
   print('\n4. Here are the UNIQUE email domains: \n')
   pprint(list(set(domains)))
