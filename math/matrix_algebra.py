@@ -5,7 +5,7 @@ import numpy as np
 
 def main():
   #Matrices dict
-  Mat = {'A': np.array([[1,2,3],[2,7,4]]), 'B': np.array([[1,-1],[0,1]]), 'C': np.array([[5,-1],[9,1],[6,0]]), 'D': np.array([[3, -2, -1],[1,2,3]]), 'u': np.array([6,3,-3,5]), 'v': np.array([3,5,-1,4]), 'w': np.array([(1),(8),(0),(5)])}
+  Mat = {'A': np.array([[1,2,3],[2,7,4]]), 'B': np.array([[1,-1],[0,1]]), 'C': np.array([[5,-1],[9,1],[6,0]]), 'D': np.array([[3, -2, -1],[1,2,3]]), 'u': np.array([6,2,-3,5]), 'v': np.array([3,5,-1,4]), 'w': np.array([(1),(8),(0),(5)])}
   
   
   # SOLUTIONS
@@ -28,21 +28,21 @@ def main():
   
   #2 Vector Operations
   print('\n Vector Operations: ') 
-  print("u+v = "+str(Mat['u']+Mat['v'])) #u+v = [ 9  8 -4  9]
-  print("u-v = "+str(Mat['u']-Mat['v'])) #u-v = [ 3 -2 -2  1]
-  print("6*u = "+str(6*Mat['u'])) #6*u = [ 36  18 -18  30]
-  print("u.v = "+str(Mat['u'].dot(Mat['v']))) #u.v = 56
-  print("||u|| = "+str(np.sqrt(sum(Mat['u']**2)))) #||u|| = 8.88819441732
+  print("u+v = "+str(Mat['u']+Mat['v'])) #u+v = [ 9  7 -4  9]
+  print("u-v = "+str(Mat['u']-Mat['v'])) #u-v = [ 3 -3 -2  1]
+  print("6*u = "+str(6*Mat['u'])) #6*u = [ 36  12 -18  30]
+  print("u.v = "+str(Mat['u'].dot(Mat['v']))) #u.v = 51
+  print("||u|| = "+str(np.sqrt(sum(Mat['u']**2)))) #||u|| = 8.60232526704
   
   #3 Matrix Operations
   print('\n Matrix Operations: ')
   try:
     #print("A+C = ", (Mat['A']+Mat['B'])) #invalid
     
-    print("A-C' = ", (Mat['A']+Mat['C'].T))
+    print("A-C' = ", (Mat['A']-Mat['C'].T))
     """
-    ("A-C' = ", array([[ 6, 11,  9],
-      [ 1,  8,  4]]))
+    ("A-C' = ", array([[-4, -7, -3],
+       [ 3,  6,  4]])
     """
 
     print("C'+3D = ", (Mat['C'].T+3*Mat['D']))
