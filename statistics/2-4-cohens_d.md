@@ -1,6 +1,6 @@
 [Think Stats Chapter 2 Exercise 4](http://greenteapress.com/thinkstats2/html/thinkstats2003.html#toc24) (Cohen's d)
 
-# Analyze Effect Size of Weight Between First and Second Babies  
+# Analyze Effect Size of Weight Between First and Later Babies  
 
 This report uses the *CDC's* *National Survey of Family Growth* (NSFG) dataset. More info about the dataset is [here](http://cdc.gov/nchs/nsfg.htm). For this exercise I will investigate the following:  
 > Using the variable totalwgt_lb, investigate whether first babies
@@ -59,5 +59,10 @@ def cohensd(firstBorn_wgts,laterBorn_wgts):
 
 # Result  
 
-The Cohen's D of approximately **-0.089 lbs.** standard deviation when comparing first born babies to later born babies suggests that the difference in means between the two groups is rather trivial. So no inferences can be confidently made around any probable hypothesis that compares weights of First borns to later borns.  
-Since the mean difference between pregnancy lengths of first time versus later pregnancies was also a trivial number at 0.078 weeks, there seems to be only a very small negative correlation between pregnancy length and birth weight of the baby.
+The Cohen's D of approximately **-0.089 lbs.** when comparing first born babies to later born babies suggests that the standard deviation between means of the two groups is rather trivial. So no inferences can be confidently made around any probable hypothesis that compares weights of First borns to later borns.  
+
+The very trivial mean difference between pregnancies of 0.078 suggests that although first time pregnancies take slightly longer whereas the birth weights of babies are slightly lesser. These are both very trivial effects.   
+
+---  
+**End of Report**  
+ 
