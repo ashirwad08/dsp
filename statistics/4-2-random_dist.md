@@ -44,7 +44,7 @@ plt.ylabel('CDF: Percentile Rank of Value')
 plt.title('CDF of 1000 randomly generated floats from random.random()')
 plt.show()
 ```  
-![Figure 2: CDF of 1000 random numbers from random.random()]("./cdf ex 4.png")  
+![Figure 2: CDF of 1000 random numbers from random.random()](cdf ex 4.png)  
 
 That this sdistribution is indeed **uniform** can be confirmed by the fact that he plot is more or less a straight line. For e.g. the value generated at 0.5 does fall in approximately the 50th percentile on teh chart, and so on for other values.  
 
