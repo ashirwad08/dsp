@@ -27,7 +27,7 @@ plt.title('CDF of Men\'s Heights is a Normal Distribution')
 plt.show()
 ```  
 
-[Figure 1: CDF of Men's Heights](cdf ex 5.png)
+![Figure 1: CDF of Men's Heights](cdf ex 5.png)
 
 # Eligible Male Population for Blue Man Group  
 
