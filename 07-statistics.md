@@ -96,7 +96,7 @@ Substituting, P(Elvis is Identical Twin | There was a Twin Brother) = 0.2949 or 
 ###Q6. Bayesian &amp; Frequentist Comparison  
 How do frequentist and Bayesian statistics compare?
 
-In the **Frequentist** interpretation of probability, the implicit assumption is that of an objective world, and therefore probability of an event occurring may only be determined by repeated sampling of the event actually occuring, as close to infinity as possible.  
+In the **Frequentist** interpretation of probability, the implicit assumption is that of an objective world, and therefore probability of an event occurring may only be determined by repeated sampling of the event actually occuring, as close to infinity as possible.  Historic information around the event may not inform its occurrence.  
 
 In the **Bayesian** interpretation, however, the agent's uncertainty plays a factor in determining the probability of an event. The historic information around an event serves to reduce the agent's uncertainty, which, when combined with a sampling of the event occuring may offer the agent a measure of its certainty - probability. The Bayesian, as a consequence, does not automatically grant the objectivity of the external world, and does in fact allow for Internalism (subjective interpretation as a determiner of reality) to play a role. 
 
