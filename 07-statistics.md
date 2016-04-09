@@ -70,14 +70,27 @@ Bayes' Theorem is an important tool in understanding what we really know, given 
 
 Elvis Presley had a twin brother who died at birth.  What is the probability that Elvis was an identical twin? Assume we observe the following probabilities in the population: fraternal twin is 1/125 and identical twin is 1/300.  
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+P(Elvis is Identical Twin | There was a Twin Brother) = ? 
+P(Fraternal Twin) = 1/125
+P(Identical Twin) = 1/300 
+P(There was a Twin Brother | Elvis is Identical Twin) = 1
+P(There is a Twin) = 1/125 + 1/300 = 0.0113  
+
+
+> P(Elvis is Identical Twin | There was a Twin Brother) = P(There was a Twin Brother | Elvis is Identical Twin) X P(Elvis is Identical Twin) / P(There was a Twin Brother)  
+
+Substituting, P(Elvis is Identical Twin | There was a Twin Brother) = 0.2949 or **29.5%**.
+
+
 
 ---
 
 ###Q6. Bayesian &amp; Frequentist Comparison  
 How do frequentist and Bayesian statistics compare?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+In the **Frequentist** interpretation of probability, the implicit assumption is that of an objective world, and therefore probability of an event occurring may only be determined by repeated sampling of the event actually occuring, as close to infinity as possible.  
+
+In the **Bayesian** interpretation, however, the agent's uncertainty plays a factor in determining the probability of an event. The historic information around an event serves to reduce the agent's uncertainty, which, when combined with a sampling of the event occuring may offer the agent a measure of its certainty - probability. The Bayesian, as a consequence, does not automatically grant the objectivity of the external world, and does in fact allow for Internalism (subjective interpretation as a determiner of reality) to play a role. 
 
 ---
 
