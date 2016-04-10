@@ -26,3 +26,7 @@ The first step is to isolate the target variable *numkdhh* - number of kids in h
 ```  
 
 The distribution looks like this:  HIST IMAGE
+
+> NOTE: Did not want to use the thinkstats2 modules, but couldn't figure out how his module generated "household values" for the "numkdhh" variables. Were they arbitrary? Skipping this problem for now.
+
+
